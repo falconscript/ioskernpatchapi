@@ -21,7 +21,7 @@ cd ioskernpatchapi
 ```
 
 ## Running
-A compiled binary for the iPhone 5 on iOS 8.4 is included. This can be scp'd to your device and run in its terminal to produce these results:
+A compiled binary for the iPhone 5 on iOS 8.4 is included. This can be scp'd to a device and run in its terminal to produce these results:
 ```c
 [*] iOS kernpatchapi
 [D] Starting (exec_arch=32-bit) (proc_arch=32-bit) (endian=little) sizeof(ull)=8 sizeof(uint64_t)=8
@@ -36,7 +36,7 @@ A compiled binary for the iPhone 5 on iOS 8.4 is included. This can be scp'd to 
 ```
 
 ## Adding on
-Determine the offsets for the kernel static for OSMetaClass and ROP gadgets for your specific iOS device and version combination.
+Determine the offsets for the kernel static OSMetaClass and ROP gadgets for your specific iOS device and version combination.
 
 With those primitive functions prepared, the running kernel drivers should be at your mercy.  
 A bit of work is planned to make this easier soon.
@@ -44,7 +44,7 @@ A bit of work is planned to make this easier soon.
 ## Caveats
 The nature of the bug used to gain kernel memory access isn't 100% reliable. The compiled executable may crash the phone causing reboots.  
 These reboots are safe, but sometimes annoying. If using for a production tweak, do as Pangu does: Run the code near the start of the iPhone boot so a crash isn't as noticeable.  
-Make sure your code works before hooking into the book to prevent boot loops.  
+Make sure your code works before hooking into the boot to prevent boot loops.  
 
 ## Credits
 Thanks to all the top jailbreakers for their unbelievable talent and dedication in opening iOS to the public.  
